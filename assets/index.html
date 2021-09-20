@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>UI Dashboard</title>
+    <link rel="icon" href="./images/logo.svg" type="image/x-icon" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- Css -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <a><img src="./images/logo.svg" alt=""></a>
+        </div>
+        <div class="user">
+            <div class="profile">
+                <div class="avatar">
+                    <img src="./images/giphy.gif" alt="">
+                </div>
+                <div class="name">
+                    <h6>Hien Phan</h6>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li class="sidebar-item active">
+                    <a href="#dashboard">
+                        <div class="sidebar-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#users">
+                        <div class="sidebar-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <span>User</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#product">
+                        <div class="sidebar-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <span>Product</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#blog">
+                        <div class="sidebar-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <span>Blog</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#">
+                        <div class="sidebar-icon">
+                            <i class="fas fa-sign-in-alt"></i>
+                        </div>
+                        <span>Login</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#">
+                        <div class="sidebar-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <span>Register</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#">
+                        <div class="sidebar-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <span>Not Found</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <div class="searxh-wrapper">
+                <div class="search-header">
+                    <i class="fa fa-search"></i>
+                    <input type="search" placeholder="Type to search...">
+                </div>
+            </div>
+            <div class="user-wrapper">
+                <div class="user-wrapper__notification">
+                    <div class="user-wrapper-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                </div>
+                <div class="user-profile">
+                    <div class="profile-avatar dropdown">
+                        <a class="btn" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img src="./images/giphy.gif" alt="">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="triggerId">
+                            <a class="dropdown-item" href="#">
+                                <i class="far fa-user"></i>
+                                <span>Profile</span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-cog"></i>
+                                <span>Settings</span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-search-dollar"></i>
+                                <span>Earnings</span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-download"></i>
+                                <span>Downloads</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <section id="dashboard">
+                <h4>Hi, Welcome back</h4>
+                <div class="cards">
+                    <div class="row">
+                        <div class="sales col-md-3 col-sm-6 col-xs-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card-icon">
+                                        <i class="fab fa-android"></i>
+                                    </div>
+                                    <h3>699k</h3>
+                                    <h6>Weekly Sales</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="users col-md-3 col-sm-6 col-xs-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card-icon">
+                                        <i class="fab fa-apple"></i>
+                                    </div>
+                                    <h3>1.20m</h3>
+                                    <h6>New Users</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="orders col-md-3 col-sm-6 col-xs-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card-icon">
+                                        <i class="fab fa-windows"></i>
+                                    </div>
+                                    <h3>1.77m</h3>
+                                    <h6>Item Orders</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reports col-md-3 col-sm-6 col-xs-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card-icon">
+                                        <i class="fas fa-bug"></i>
+                                    </div>
+                                    <h3>221</h3>
+                                    <h6>Bug Reports</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="charts">
+                    <div class="row mt-4">
+                        <div class="col-lg-8 col-md-6 col-xs-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">Website Visits</h6>
+                                    <p class="card-text">(+43%) than last year</p>
+                                    <div class="mixedchart"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-xs-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">Current Visits</h6>
+                                    <div class="piechart"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-lg-8 col-md-6 col-xs-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">Conversion Rates</h6>
+                                    <p class="card-text">(+43%) than last year</p>
+                                    <div class="barchart"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-xs-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">Current Subject</h6>
+                                    <div class="radarchart"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="others">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-xs-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">Traffic by Site</h6>
+                                    <div class="row card-center">
+                                        <div class="col-md-6 other-fb">
+                                            <div class="text-center">
+                                                <i class="fab fa-facebook-f"></i>
+                                                <h3>59.96k</h3>
+                                                <p>Facebook</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 other-google">
+                                            <div class="text-center">
+                                                <i class="fab fa-google"></i>
+                                                <h3>59.96k</h3>
+                                                <p>Facebook</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 other-in">
+                                            <div class="text-center">
+                                                <i class="fab fa-linkedin-in"></i>
+                                                <h3>59.96k</h3>
+                                                <p>Facebook</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 other-twi">
+                                            <div class="text-center">
+                                                <i class="fab fa-twitter"></i>
+                                                <h3>59.96k</h3>
+                                                <p>Facebook</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-6 col-xs-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">Tasks</h6>
+                                    <div class="tasks">
+                                        <div class="form-check">
+                                            <input type="checkbox">
+                                            <label for="">Create FireStone Logo</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox">
+                                            <label for="">Add SCSS and JS files if required</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox">
+                                            <label for="">Stakeholder Meeting</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox">
+                                            <label for="">Scoping & Estimations</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox">
+                                            <label for="">Sprint Showcase</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- user -->
+            <div id="users">
+                <h4>User</h4>
+                <div class="user">
+                    <div class="user-main">
+                        <div class="user-search">
+                            <i class="fa fa-search"></i>
+                            <input type="search" placeholder="Search user...">
+                        </div>
+                        <div class="user-content">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Company</th>
+                                        <th>Rule</th>
+                                        <th>Verified</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="username">
+                                                <img src="./images/giphy.gif" alt="">
+                                                <span>Hien Phan</span>
+                                            </div>
+                                        </td>
+                                        <td>Pollich, Zboncak and Bergstrom </td>
+                                        <td>Frontend Developer</td>
+                                        <td>Yes</td>
+                                        <td>
+                                            <span class="status-banned">Banned</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="username">
+                                                <img src="./images/avatar_24.jpg" alt="">
+                                                <span>Antonia Reichel</span>
+                                            </div>
+                                        </td>
+                                        <td>Rogahn Inc</td>
+                                        <td>Backend Developer</td>
+                                        <td>No</td>
+                                        <td>
+                                            <span class="status-active">Active</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="username">
+                                                <img src="./images/avatar_14.jpg" alt="">
+                                                <span>Sherman Beier</span>
+                                            </div>
+                                        </td>
+                                        <td>Senger and Sons</td>
+                                        <td>UX Designer</td>
+                                        <td>No</td>
+                                        <td>
+                                            <span class="status-banned">Banned</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="username">
+                                                <img src="./images/avatar_5.jpg" alt="">
+                                                <span>Tanya Cormier</span>
+                                            </div>
+                                        </td>
+                                        <td>Ledner - Thiel</td>
+                                        <td>Leader</td>
+                                        <td>Yes</td>
+                                        <td>
+                                            <span class="status-active">Active</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <i class="fas fa-angle-left"></i>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <i class="fas fa-angle-right"></i>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- product -->
+            <div id="product">
+                <h4>Orders Summary</h4>
+                <div class="products">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Order id</th>
+                                <th>Product</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>Price</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#897656</td>
+                                <td class="product">
+                                    <img src="./images/chair.png" alt="">
+                                    <span>Light Blue Chairz</span>
+                                </td>
+                                <td>Brooklyn Zeo</td>
+                                <td>12 Jul 2020</td>
+                                <td>$64.00</td>
+                                <td class="other-status text-danger">
+                                    <i class="far fa-dot-circle"></i>
+                                    <span>Pending</span>
+                                </td>
+                                <td class="action">
+                                    <a><i class="fas fa-cog"></i></a>
+                                    <a><i class="fas fa-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#562738</td>
+                                <td class="product">
+                                    <img src="./images/shoes.png" alt="">
+                                    <span>Green Sport Shoes</span>
+                                </td>
+                                <td>Martin Hughes</td>
+                                <td>14 Jul 2020</td>
+                                <td>$70.00</td>
+                                <td class="other-status text-primary">
+                                    <i class="far fa-dot-circle"></i>
+                                    <span>Pending</span>
+                                </td>
+                                <td class="action">
+                                    <a><i class="fas fa-cog"></i></a>
+                                    <a><i class="fas fa-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#833617</td>
+                                <td class="product">
+                                    <img src="./images/headphones.png" alt="">
+                                    <span>Red Headphone 07</span>
+                                </td>
+                                <td>Martin Hughes</td>
+                                <td>15 Jul 2020</td>
+                                <td>$65.00</td>
+                                <td class="other-status text-success">
+                                    <i class="far fa-dot-circle"></i>
+                                    <span>Pending</span>
+                                </td>
+                                <td class="action">
+                                    <a><i class="fas fa-cog"></i></a>
+                                    <a><i class="fas fa-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#128368</td>
+                                <td class="product">
+                                    <img src="./images/idea.png" alt="">
+                                    <span>Mini Laptop Device</span>
+                                </td>
+                                <td>Alister Campel</td>
+                                <td>17 Jul 2020</td>
+                                <td>$56.00</td>
+                                <td class="other-status text-success">
+                                    <i class="far fa-dot-circle"></i>
+                                    <span>Pending</span>
+                                </td>
+                                <td class="action">
+                                    <a><i class="fas fa-cog"></i></a>
+                                    <a><i class="fas fa-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#678469</td>
+                                <td class="product">
+                                    <img src="./images/user-interface.png" alt="">
+                                    <span>Mini Laptop Device</span>
+                                </td>
+                                <td>Keate Medona</td>
+                                <td>22 Jul 2020</td>
+                                <td>$34.00</td>
+                                <td class="other-status text-danger">
+                                    <i class="far fa-dot-circle"></i>
+                                    <span>Pending</span>
+                                </td>
+                                <td class="action">
+                                    <a><i class="fas fa-cog"></i></a>
+                                    <a><i class="fas fa-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#097475</td>
+                                <td class="product">
+                                    <img src="./images/watch.png" alt="">
+                                    <span>Smart Hand Watch</span>
+                                </td>
+                                <td>Winslet Maya</td>
+                                <td>24 Jul 2020</td>
+                                <td>$73.00</td>
+                                <td class="other-status text-primary">
+                                    <i class="far fa-dot-circle"></i>
+                                    <span>Pending</span>
+                                </td>
+                                <td class="action">
+                                    <a><i class="fas fa-cog"></i></a>
+                                    <a><i class="fas fa-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#518364</td>
+                                <td class="product">
+                                    <img src="./images/tshirt.png" alt="">
+                                    <span>T-Shirt Blue</span>
+                                </td>
+                                <td>Winslet Maya</td>
+                                <td>25 Jul 2020</td>
+                                <td>$87.00</td>
+                                <td class="other-status text-danger">
+                                    <i class="far fa-dot-circle"></i>
+                                    <span>Pending</span>
+                                </td>
+                                <td class="action">
+                                    <a><i class="fas fa-cog"></i></a>
+                                    <a><i class="fas fa-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- blog -->
+            <div id="blog">
+                <h4>Blog</h4>
+                <div class="blog">
+                    <div class="blog-main">
+                        <div class="blog-header">
+                            <div class="blog-search">
+                                <i class="fa fa-search"></i>
+                                <input type="search" placeholder="Search post...">
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" name="" id="">
+                                    <option>Lasted</option>
+                                    <option>Popular</option>
+                                    <option>Oldest</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="blog-list row">
+                            <div class="col-md-6 col-sm-12 col-xs-12 p-2">
+                                <div class="card">
+                                    <img class="card-img" src="./images/cover_1.jpg" alt="">
+                                    <div class="card-img-overlay">
+                                        <p class="card-text">20 November 2020</p>
+                                        <h4 class="card-title">Tesla Cybertruck-inspired camper trailer for Tesla fans
+                                            who can’t just wait for the truck!</h4>
+                                        <div class="card-actions">
+                                            <div class="card-action__view">
+                                                <i class="fas fa-comment-dots"></i>
+                                                <span>12.76k</span>
+                                            </div>
+                                            <div class="card-action__cmt">
+                                                <i class="fas fa-eye"></i>
+                                                <span>54.23k</span>
+                                            </div>
+                                            <div class="card-action__share">
+                                                <i class="fas fa-share-alt"></i>
+                                                <span>9.76k</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12 p-2">
+                                <div class="card">
+                                    <img class="card-img-top" src="./images/cover_2.jpg" alt="">
+                                    <div class="card-img-overlay">
+                                        <p class="card-text">20 November 2020</p>
+                                        <h4 class="card-title">Tesla Cybertruck-inspired camper trailer for Tesla fans
+                                            who can’t just wait for the truck!</h4>
+                                        <div class="card-actions">
+                                            <div class="card-action__view">
+                                                <i class="fas fa-comment-dots"></i>
+                                                <span>12.76k</span>
+                                            </div>
+                                            <div class="card-action__cmt">
+                                                <i class="fas fa-eye"></i>
+                                                <span>54.23k</span>
+                                            </div>
+                                            <div class="card-action__share">
+                                                <i class="fas fa-share-alt"></i>
+                                                <span>9.76k</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12 p-2">
+                                <div class="card">
+                                    <img class="card-img-top" src="./images/cover_3.jpg" alt="">
+                                    <div class="card-img-overlay">
+                                        <p class="card-text">20 November 2020</p>
+                                        <h4 class="card-title">Tesla Cybertruck-inspired camper trailer for Tesla fans
+                                            who can’t just wait for the truck!</h4>
+                                        <div class="card-actions">
+                                            <div class="card-action__view">
+                                                <i class="fas fa-comment-dots"></i>
+                                                <span>12.76k</span>
+                                            </div>
+                                            <div class="card-action__cmt">
+                                                <i class="fas fa-eye"></i>
+                                                <span>54.23k</span>
+                                            </div>
+                                            <div class="card-action__share">
+                                                <i class="fas fa-share-alt"></i>
+                                                <span>9.76k</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12 p-2">
+                                <div class="card">
+                                    <img class="card-img-top" src="./images/cover_8.jpg" alt="">
+                                    <div class="card-img-overlay">
+                                        <p class="card-text">20 November 2020</p>
+                                        <h4 class="card-title">Tesla Cybertruck-inspired camper trailer for Tesla fans
+                                            who can’t just wait for the truck!</h4>
+                                        <div class="card-actions">
+                                            <div class="card-action__view">
+                                                <i class="fas fa-comment-dots"></i>
+                                                <span>12.76k</span>
+                                            </div>
+                                            <div class="card-action__cmt">
+                                                <i class="fas fa-eye"></i>
+                                                <span>54.23k</span>
+                                            </div>
+                                            <div class="card-action__share">
+                                                <i class="fas fa-share-alt"></i>
+                                                <span>9.76k</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="./js/apexcharts.js"></script>
+    <script src="./js/main.js"></script>
+
+
+</body>
+
+</html>

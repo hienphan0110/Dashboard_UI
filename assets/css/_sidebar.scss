@@ -1,0 +1,74 @@
+@import "mixins";
+// @import "variables";
+
+.sidebar {
+  width: 280px;
+  height: 100%;
+  position: fixed;
+  border-right: 1px solid rgba(145, 158, 171, 0.24);
+  .logo {
+    padding: 24px 20px;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .user {
+    background: $bg-PrimaryColor;
+    margin: 20px 32px;
+    border-radius: 16px;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      padding: 16px 20px;
+    }
+    .name {
+      margin-left: 16px;
+    }
+  }
+  .menu {
+    ul {
+      .sidebar-item {
+        height: 50px;
+        width: 100%;
+        @include flex-center;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background: $bg-PrimaryColor;
+          list-style: none;
+        }
+        a {
+          display: flex;
+          color: $text-color;
+          padding: 8px 20px 8px 40px;
+          width: 100%;
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          .sidebar-icon {
+            width: 30px;
+          }
+          span {
+            margin-left: 8px;
+          }
+        }
+      }
+
+      .sidebar-item.active {
+        border-right: 3px solid #00ab55;
+        a {
+          color: #00ab55;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin border-status {
+  border: 1px solid;
+  color: #fff;
+  border-radius: 16px;
+  padding: 1px 8px;
+  font-size: 12px;
+}
