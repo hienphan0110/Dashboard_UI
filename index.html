@@ -3,7 +3,7 @@
 
 <head>
     <title>UI Dashboard</title>
-    <link rel="icon" href="./assets/images/logo.svg" type="image/x-icon" />
+    <link rel="icon" href="./images/logo.svg" type="image/x-icon" />
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,6 +29,7 @@
     <div class="sidebar">
         <div class="logo">
             <a><img src="./images/logo.svg" alt=""></a>
+            <i class="fas fa-times close-sidebar"></i>
         </div>
         <div class="user">
             <div class="profile">
@@ -101,9 +102,14 @@
             </ul>
         </div>
     </div>
+    <div class="sidebar-overlay">
+    </div>
     <div class="main-content">
         <div class="header">
             <div class="searxh-wrapper">
+                <div class="bars-btn">
+                    <img src="./images/menu.svg" alt="">
+                </div>
                 <div class="search-header">
                     <i class="fa fa-search"></i>
                     <input type="search" placeholder="Type to search...">
@@ -157,7 +163,7 @@
                 <h4>Hi, Welcome back</h4>
                 <div class="cards">
                     <div class="row">
-                        <div class="sales col-md-3 col-sm-6 col-xs-12">
+                        <div class="sales col-xl-3 col-sm-6 col-xs-12">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="card-icon">
@@ -168,7 +174,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="users col-md-3 col-sm-6 col-xs-12">
+                        <div class="users col-xl-3 col-sm-6 col-xs-12">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="card-icon">
@@ -179,7 +185,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="orders col-md-3 col-sm-6 col-xs-12">
+                        <div class="orders col-xl-3 col-sm-6 col-xs-12">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="card-icon">
@@ -190,7 +196,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="reports col-md-3 col-sm-6 col-xs-12">
+                        <div class="reports col-xl-3 col-sm-6 col-xs-12">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="card-icon">
@@ -288,24 +294,24 @@
                                     <h6 class="card-title">Tasks</h6>
                                     <div class="tasks">
                                         <div class="form-check">
-                                            <input type="checkbox">
-                                            <label for="">Create FireStone Logo</label>
+                                            <input class="check-input" type="checkbox">
+                                            <label class="check-label" for="">Create FireStone Logo</label>
                                         </div>
                                         <div class="form-check">
-                                            <input type="checkbox">
-                                            <label for="">Add SCSS and JS files if required</label>
+                                            <input class="check-input" type="checkbox">
+                                            <label class="check-label" for="">Add SCSS and JS files if required</label>
                                         </div>
                                         <div class="form-check">
-                                            <input type="checkbox">
-                                            <label for="">Stakeholder Meeting</label>
+                                            <input class="check-input" type="checkbox">
+                                            <label class="check-label" for="">Stakeholder Meeting</label>
                                         </div>
                                         <div class="form-check">
-                                            <input type="checkbox">
-                                            <label for="">Scoping & Estimations</label>
+                                            <input class="check-input" type="checkbox">
+                                            <label class="check-label" for="">Scoping & Estimations</label>
                                         </div>
                                         <div class="form-check">
-                                            <input type="checkbox">
-                                            <label for="">Sprint Showcase</label>
+                                            <input class="check-input" type="checkbox">
+                                            <label class="check-label" for="">Sprint Showcase</label>
                                         </div>
                                     </div>
                                 </div>
@@ -428,10 +434,10 @@
                                 <th>Order id</th>
                                 <th>Product</th>
                                 <th>Customer</th>
+                                <th>Location</th>
                                 <th>Date</th>
                                 <th>Price</th>
                                 <th>Status</th>
-                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -442,16 +448,10 @@
                                     <span>Light Blue Chairz</span>
                                 </td>
                                 <td>Brooklyn Zeo</td>
+                                <td> Oxford Street</td>
                                 <td>12 Jul 2020</td>
                                 <td>$64.00</td>
-                                <td class="other-status text-danger">
-                                    <i class="far fa-dot-circle"></i>
-                                    <span>Pending</span>
-                                </td>
-                                <td class="action">
-                                    <a><i class="fas fa-cog"></i></a>
-                                    <a><i class="fas fa-arrow-down"></i></a>
-                                </td>
+                                <td class="text-danger">Cancelled</td>
                             </tr>
                             <tr>
                                 <td>#562738</td>
@@ -460,16 +460,10 @@
                                     <span>Green Sport Shoes</span>
                                 </td>
                                 <td>Martin Hughes</td>
+                                <td>New Town</td>
                                 <td>14 Jul 2020</td>
                                 <td>$70.00</td>
-                                <td class="other-status text-primary">
-                                    <i class="far fa-dot-circle"></i>
-                                    <span>Pending</span>
-                                </td>
-                                <td class="action">
-                                    <a><i class="fas fa-cog"></i></a>
-                                    <a><i class="fas fa-arrow-down"></i></a>
-                                </td>
+                                <td class="text-primary">Pending</td>
                             </tr>
                             <tr>
                                 <td>#833617</td>
@@ -478,16 +472,10 @@
                                     <span>Red Headphone 07</span>
                                 </td>
                                 <td>Martin Hughes</td>
+                                <td>Old Town</td>
                                 <td>15 Jul 2020</td>
                                 <td>$65.00</td>
-                                <td class="other-status text-success">
-                                    <i class="far fa-dot-circle"></i>
-                                    <span>Pending</span>
-                                </td>
-                                <td class="action">
-                                    <a><i class="fas fa-cog"></i></a>
-                                    <a><i class="fas fa-arrow-down"></i></a>
-                                </td>
+                                <td class="text-success">Delivered</td>
                             </tr>
                             <tr>
                                 <td>#128368</td>
@@ -496,16 +484,10 @@
                                     <span>Mini Laptop Device</span>
                                 </td>
                                 <td>Alister Campel</td>
+                                <td>Oxford Street</td>
                                 <td>17 Jul 2020</td>
                                 <td>$56.00</td>
-                                <td class="other-status text-success">
-                                    <i class="far fa-dot-circle"></i>
-                                    <span>Pending</span>
-                                </td>
-                                <td class="action">
-                                    <a><i class="fas fa-cog"></i></a>
-                                    <a><i class="fas fa-arrow-down"></i></a>
-                                </td>
+                                <td class="text-success">Delivered</td>
                             </tr>
                             <tr>
                                 <td>#678469</td>
@@ -514,16 +496,10 @@
                                     <span>Mini Laptop Device</span>
                                 </td>
                                 <td>Keate Medona</td>
+                                <td>Church hill</td>
                                 <td>22 Jul 2020</td>
                                 <td>$34.00</td>
-                                <td class="other-status text-danger">
-                                    <i class="far fa-dot-circle"></i>
-                                    <span>Pending</span>
-                                </td>
-                                <td class="action">
-                                    <a><i class="fas fa-cog"></i></a>
-                                    <a><i class="fas fa-arrow-down"></i></a>
-                                </td>
+                                <td class="text-danger">Cancelled</td>
                             </tr>
                             <tr>
                                 <td>#097475</td>
@@ -532,16 +508,10 @@
                                     <span>Smart Hand Watch</span>
                                 </td>
                                 <td>Winslet Maya</td>
+                                <td>Palace Road</td>
                                 <td>24 Jul 2020</td>
                                 <td>$73.00</td>
-                                <td class="other-status text-primary">
-                                    <i class="far fa-dot-circle"></i>
-                                    <span>Pending</span>
-                                </td>
-                                <td class="action">
-                                    <a><i class="fas fa-cog"></i></a>
-                                    <a><i class="fas fa-arrow-down"></i></a>
-                                </td>
+                                <td class="text-primary">Pending</td>
                             </tr>
                             <tr>
                                 <td>#518364</td>
@@ -550,16 +520,10 @@
                                     <span>T-Shirt Blue</span>
                                 </td>
                                 <td>Winslet Maya</td>
+                                <td>Street 21</td>
                                 <td>25 Jul 2020</td>
                                 <td>$87.00</td>
-                                <td class="other-status text-danger">
-                                    <i class="far fa-dot-circle"></i>
-                                    <span>Pending</span>
-                                </td>
-                                <td class="action">
-                                    <a><i class="fas fa-cog"></i></a>
-                                    <a><i class="fas fa-arrow-down"></i></a>
-                                </td>
+                                <td class="text-danger">Cancelled</td>
                             </tr>
                         </tbody>
                     </table>
@@ -695,9 +659,12 @@
     <!-- Optional JavaScript -->
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>

@@ -2,15 +2,34 @@
 // @import "variables";
 
 .sidebar {
+  @include tablet {
+    transform: translateX(-100%);
+  }
+  @include mobile {
+    transform: translateX(-100%);
+  }
   width: 280px;
   height: 100%;
   position: fixed;
   border-right: 1px solid rgba(145, 158, 171, 0.24);
+  z-index: 9999;
+  background: $bg-Color;
+  transition: all 0.5s ease;
   .logo {
     padding: 24px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     img {
       width: 40px;
       height: 40px;
+    }
+    i {
+      font-size: 30px;
+      color: #00ab55;
+      @include desktop {
+        display: none;
+      }
     }
   }
   .user {
@@ -73,3 +92,24 @@
     }
   }
 }
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100vh;
+  z-index: 1000;
+  transition: all 0.5s ease;
+}
+.sidebar.show {
+  transform: translateX(0px);
+  transition: all 0.5s ease;
+}
+// @include desktop {
+//   .sidebar {
+//     visibility: hidden;
+//     opacity: 0;
+//     transform: translateX(-280px);
+//     transition: all 0.3s ease;
+//   }
+// }

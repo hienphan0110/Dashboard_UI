@@ -26,6 +26,7 @@
       }
     }
     .user-content {
+      overflow-y: auto;
       .table {
         .username {
           display: flex;
@@ -70,6 +71,8 @@
           border: none;
           box-shadow: none;
           margin-left: 0;
+          border-radius: 50px;
+          padding: 6px 11px;
         }
         .page-link.active {
           border: 1px solid;

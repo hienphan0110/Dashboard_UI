@@ -1,20 +1,27 @@
 .main-content {
+  @include desktop {
+    padding-left: 280px;
+  }
   padding-top: 1px;
-  padding-left: 280px;
   .main {
     margin-top: 64px;
     padding: 30px 40px;
+    @include mobile {
+      padding: 30px 20px;
+    }
     #dashboard {
       h4 {
         font-size: 22px;
         font-weight: 700;
+        margin-top: 10px;
       }
       .cards {
-        margin: 36px;
+        margin: 36px 0;
         .sales,
         .users,
         .orders,
         .reports {
+          margin-bottom: 15px;
           .card {
             text-align: center;
             padding: 40px 0;
@@ -98,6 +105,7 @@
             }
             .piechart {
               padding: 38px 0;
+              @include flex-center;
             }
           }
         }
@@ -123,8 +131,8 @@
                 }
                 .text-center {
                   border: 1px solid rgba(145, 158, 171, 0.24);
-                  padding: 24px;
-                  margin: 6px 0;
+                  padding: 18px;
+                  margin: 12px 0;
                   border-radius: 12px;
                   line-height: 36px;
                   h3 {
@@ -156,8 +164,20 @@
             }
             .tasks {
               line-height: 68px;
-              label {
-                cursor: pointer;
+              .form-check {
+                display: flex;
+                align-items: center;
+                input {
+                  width: 18px;
+                  height: 18px;
+                  margin-right: 8px;
+                }
+                label {
+                  cursor: pointer;
+                }
+                input[type="checkbox"]:checked + label.check-label {
+                  text-decoration: line-through;
+                }
               }
             }
           }

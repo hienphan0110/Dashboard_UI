@@ -9,10 +9,26 @@
   padding: 0px 40px;
   z-index: 999;
   background: #ebeaecb8;
+  @include tablet {
+    inset: 0;
+  }
+  @include mobile {
+    inset: 0;
+    padding: 0 10px;
+  }
   .searxh-wrapper {
+    @include flex-center;
+    .bars-btn {
+      cursor: pointer;
+      @include desktop {
+        display: none;
+      }
+      width: 24px;
+      height: 24px;
+    }
     .search-header {
       position: relative;
-      margin: 24px 0;
+      margin: 24px;
       i {
         position: absolute;
         top: 18px;
@@ -25,6 +41,9 @@
         border: 1px solid #ced4da;
         border-radius: 8px;
         outline: none;
+      }
+      @include mobile {
+        display: none;
       }
     }
   }

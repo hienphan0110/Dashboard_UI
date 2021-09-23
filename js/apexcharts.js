@@ -75,7 +75,8 @@
         var options = {
             series: [44, 55, 13, 43],
             chart: {
-            width: 380,
+            // width: 300,
+            height: 300,
             type: 'pie',
           },
           labels: ['America', 'Asia', 'Europe', 'Africa'],
@@ -83,7 +84,8 @@
             breakpoint: 480,
             options: {
               chart: {
-                width: 200
+                // width: 200\
+                width:350
               },
               legend: {
                 position: 'bottom'
