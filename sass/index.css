@@ -44,6 +44,7 @@
 .sidebar .logo i {
   font-size: 30px;
   color: #00ab55;
+  cursor: pointer;
 }
 
 @media (min-width: 1224px) {
@@ -485,7 +486,7 @@
 .main-content .main #dashboard .others .card .card-body .tasks .form-check input {
   width: 18px;
   height: 18px;
-  margin-right: 8px;
+  margin-right: 6px;
 }
 
 .main-content .main #dashboard .others .card .card-body .tasks .form-check label {
