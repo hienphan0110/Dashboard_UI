@@ -13,6 +13,7 @@
             type: 'line',
             data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39]
           }],
+          colors: ["#00ab55", "#ffc107", "#1890ff"],
             chart: {
             height: 350,
             type: 'line',
@@ -102,6 +103,7 @@
             series: [{
             data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
           }],
+          colors: ["#00ab55"],
             chart: {
             type: 'bar',
             height: 350
@@ -109,6 +111,7 @@
           plotOptions: {
             bar: {
               borderRadius: 4,
+              barHeight: "30%",
               horizontal: true,
             }
           },
